@@ -1,2 +1,2 @@
-# css-rotate-image-animation-on-hover
+# CSS Rotate Image Animation on Hover
 GitHub Pages
