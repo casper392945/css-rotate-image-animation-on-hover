@@ -1,0 +1,379 @@
+{
+  "settings": {
+    "name": "CSS Rotate Image Animation on Hover",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise5",
+      "title": "Mobirise 5",
+      "styling": {
+        "primaryColor": "#6592e6",
+        "secondaryColor": "#ff6666",
+        "successColor": "#40b0bf",
+        "infoColor": "#47b5ed",
+        "warningColor": "#FFE161",
+        "dangerColor": "#ff9966",
+        "mainFont": "Jost",
+        "display1Font": "Nunito",
+        "display1Size": 4.6,
+        "display2Font": "Nunito",
+        "display2Size": 3,
+        "display5Font": "Nunito",
+        "display5Size": 2.2,
+        "display7Font": "Nunito",
+        "display7Size": 1.2,
+        "display4Font": "Nunito",
+        "display4Size": 1.1,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#193bba"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.0.17",
+    "siteFonts": [
+      {
+        "css": "'Nunito', sans-serif",
+        "name": "Nunito",
+        "url": "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      }
+    ],
+    "favicon": false,
+    "imageResize": false,
+    "cssOptimize": false,
+    "lazyLoad": false,
+    "lazyType": "nothing",
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "witsec-white-label": false,
+    "witsec-language": false,
+    "witsec-mailform": false,
+    "pwa-switcher": false,
+    "htmltag": "<html>",
+    "uniqCompNum": 10,
+    "versionPublish": "5.0.17",
+    "screenshot": "screenshot.png",
+    "publishChangesOnly": false
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "CSS Rotate Image Animation on Hover",
+        "meta_descr": "CSS Rotate Image Animation on Hover",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#333333"
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            }
+          },
+          "_name": "header3",
+          "_customHTML": "<section class=\"header3\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"range\" inline name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"10\" step=\"1\">\n        <select title=\"Align\" name=\"contentAlign\">\n            <option value>Left</option>\n            <option value=\"justify-content-center\" selected>Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" selected parallax>\n            <input type=\"color\" title=\"Color\" value=\"#4479d9\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#193bba\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"align-center\" mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row {{contentAlign}}\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><b>CSS Rotate Image Animation on Hover</b></h1>\n                <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\"><b>\n                        <a href=\"index.html#image3-0\">Scroll Down to See Demo</a></b></h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    July 26, 2020 by Muhammad Asif\n                </p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\"><a class=\"btn btn-white\" href=\"https://codeconvey.com/css-rotate-image-animation-on-hover/\" data-app-placeholder=\"Type Text\" target=\"_blank\">Demo and Source</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s5UxAeobhD",
+          "_anchor": "header3-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            ".image_box img": {
+              "width": "100%",
+              "height": "auto"
+            },
+            ".image_box": {
+              "width": "80%",
+              "max-width": "640px",
+              "margin": "0 auto",
+              "padding": "24px",
+              "border-radius": "5px",
+              "background-color": "#f2f2f2",
+              "box-shadow": "5px 5px 5px rgba(0, 0, 0, 0.3)",
+              "cursor": "pointer"
+            },
+            ".rotateX:hover": {
+              "transform": "rotateX(360deg)",
+              "-moz-transform": "rotateX(360deg)",
+              "-webkit-transform": "rotateX(360deg)",
+              "transform-origin": "center",
+              "-moz-transform-origin": "center",
+              "-webkit-transform-origin": "center",
+              "transition": "2.0s ease",
+              "-moz-transition": "2.0s ease",
+              "-webkit-transition": "2.0s ease"
+            }
+          },
+          "_name": "image3",
+          "_customHTML": "<section class=\"image3\" group=\"Images\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"10\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper image_box rotateX\">\n                    <img src=\"@PROJECT_PATH@/assets/images/mbr.jpg\" alt=\"image 2D Rotate  X axis\" title=\"image 2D Rotate  X axis\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        2D Rotate  X axis</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s5UphcGlOC",
+          "_anchor": "image3-0",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            ".image_box": {
+              "width": "80%",
+              "max-width": "640px",
+              "margin": "0 auto",
+              "padding": "24px",
+              "border-radius": "5px",
+              "background-color": "#f2f2f2",
+              "box-shadow": "5px 5px 5px rgba(0, 0, 0, 0.3)",
+              "cursor": "pointer"
+            },
+            ".image_box img": {
+              "width": "100%",
+              "height": "auto"
+            },
+            ".rotateY:hover": {
+              "transform": "rotateY(360deg)",
+              "-moz-transform": "rotateY(360deg)",
+              "-webkit-transform": "rotateY(360deg)",
+              "transform-origin": "center",
+              "-moz-transform-origin": "center",
+              "-webkit-transform-origin": "center",
+              "transition": "2.0s ease",
+              "-moz-transition": "2.0s ease",
+              "-webkit-transition": "2.0s ease"
+            }
+          },
+          "_name": "image3",
+          "_customHTML": "<section class=\"image3\" group=\"Images\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"10\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper image_box rotateY\">\n                    <img src=\"@PROJECT_PATH@/assets/images/mbr-1.jpg\" alt=\"image 2D Rotate Y axis\" title=\"image 2D Rotate Y axis\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        2D Rotate Y axis</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s5UphOPKQ4",
+          "_anchor": "image3-1",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            ".image_box": {
+              "width": "80%",
+              "max-width": "640px",
+              "margin": "0 auto",
+              "padding": "24px",
+              "border-radius": "5px",
+              "background-color": "#f2f2f2",
+              "box-shadow": "5px 5px 5px rgba(0, 0, 0, 0.3)",
+              "cursor": "pointer"
+            },
+            ".image_box img": {
+              "width": "100%",
+              "height": "auto"
+            },
+            ".rotate:hover": {
+              "transform": "rotate(360deg)",
+              "-moz-transform": "rotate(360deg)",
+              "-webkit-transform": "rotate(360deg)",
+              "transform-origin": "center",
+              "-moz-transform-origin": "center",
+              "-webkit-transform-origin": "center",
+              "transition": "2s ease all",
+              "-moz-transition": "2s ease all",
+              "-webkit-transition": "2s ease all"
+            }
+          },
+          "_name": "image3",
+          "_customHTML": "<section class=\"image3\" group=\"Images\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"10\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper image_box rotate\">\n                    <img src=\"@PROJECT_PATH@/assets/images/mbr-2.jpg\" alt=\"image 3 rotate 360\" title=\"image 3 rotate 360\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        3D Rotate 360deg</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s5Upip6Yh5",
+          "_anchor": "image3-2",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-flex": {
+              "display": "flex",
+              "& when not (@reverseContent)": {
+                "justify-content": "flex-end"
+              },
+              "& when (@reverseContent)": {
+                "justify-content": "flex-start"
+              }
+            },
+            "section": {
+              "position": "relative"
+            },
+            "h4": {
+              "margin": "0"
+            },
+            "a": {
+              "font-weight": "300"
+            },
+            ".row": {
+              "align-items": "center"
+            },
+            ".item": {
+              "margin": "0 1.5rem",
+              "display": "flex",
+              "align-items": "center",
+              "h4": {
+                "padding-left": "10px",
+                "margin": "0"
+              }
+            },
+            ".img1": {
+              "color": "@iconcolor"
+            },
+            ".card-img": {
+              "width": "auto"
+            },
+            ".content": {
+              "@media (max-width: 992px)": {
+                "& when not (@reverseContent)": {
+                  "> div:not(:last-child)": {
+                    "margin-bottom": "2rem"
+                  }
+                },
+                "& when (@reverseContent)": {
+                  "> div:not(.order-2)": {
+                    "margin-bottom": "2rem"
+                  }
+                }
+              }
+            },
+            "@media (max-width: 992px)": {
+              ".align-left, .align-right": {
+                "text-align": "center"
+              },
+              ".mbr-flex": {
+                "justify-content": "center"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".mbr-flex": {
+                "flex-direction": "column",
+                "align-items": "center"
+              },
+              ".item": {
+                "padding-bottom": "0.5rem"
+              }
+            },
+            ".item-title": {
+              "color": "#c1c1c1"
+            },
+            "H4": {
+              "color": "#333333"
+            }
+          },
+          "_name": "extFooter7",
+          "_customHTML": "<section group=\"Additional Blocks\" class=\"extFooter\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconcolor\" value=\"#ffffff\" selected>\n        <input type=\"range\" inline title=\"Items\" name=\"items\" min=\"1\" max=\"4\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#36404c\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#193bba\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay&&bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center content text-white\">\n            <div class=\"col-9 col-md-12 col-lg-5 \" mbr-class=\"{'align-right order-2': reverseContent, 'align-left': !reverseContent}\">\n                <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-4\">© Copyright 2020 -&nbsp;<a href=\"https://casper55.ru/\" target=\"_blank\" class=\"text-white\">Igor Kapustin</a> - All\n                    Rights Reserved</h4>\n            </div>\n            <!--div class=\"col-12 col-md-12 col-lg-7 mbr-flex\">\n\n                <div class=\"item\" mbr-if=\"items > 0\">\n                    <div class=\"card-img\"><span mbr-icon class=\"mbr-iconfont img1 mobi-mbri-map-pin mobi-mbri\"></span>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"item-title align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item-title\"><a href=\"https://mobirise.com/\" class=\"text-black\">facebook</a></h4>\n                    </div>\n                </div>\n\n                <div class=\"item\" mbr-if=\"items > 1\">\n                    <div class=\"card-img\"><span mbr-icon class=\"mbr-iconfont img1 mobi-mbri-pin mobi-mbri\"></span></div>\n                    <div class=\"card-box\">\n                        <h4 class=\"item-title align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item-title\"><a href=\"https://mobirise.com/\" class=\"text-white\">twitter</a></h4>\n                    </div>\n                </div>\n\n                <div class=\"item\" mbr-if=\"items > 2\">\n                    <div class=\"card-img\"><span mbr-icon class=\"mbr-iconfont img1 mobi-mbri-letter mobi-mbri\"></span>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"item-title align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item-title\"><a href=\"https://mobirise.com/\" class=\"text-white\">\n                                instagram</a></h4>\n                    </div>\n                </div>\n\n                <div class=\"item\" mbr-if=\"items > 3\">\n                    <div class=\"card-img\"><span mbr-icon class=\"mbr-iconfont img1 mobi-mbri-phone mobi-mbri\"></span>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"item-title align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item-title\"><a href=\"https://mobirise.com/\" class=\"text-white\">youtube</a></h4>\n                    </div>\n                </div>\n\n                <div class=\"item\" mbr-if=\"items > 4\">\n                    <div class=\"card-img\"><span mbr-icon class=\"mbr-iconfont img1 mobi-mbri-phone mobi-mbri\"></span>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"item-title align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item-title\">+1 (0) 000 0000 001</h4>\n                    </div>\n                </div>\n            </div -->\n        </div>\n    </div>\n</section>",
+          "_cid": "s5Uzj7JkBq",
+          "_anchor": "extFooter7-9",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
